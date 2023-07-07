@@ -26,6 +26,9 @@ class success {
         }
 
         System.out.println(answer);
+        for (int[] v : visited) {
+            System.out.println(Arrays.toString(v));
+        }
     }
 
     public static void bfs(int[][] maps, int[][] visited) {

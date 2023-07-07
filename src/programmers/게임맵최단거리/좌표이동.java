@@ -53,7 +53,6 @@ public class 좌표이동 {
         }
 
         System.out.println();
-        System.out.println();
         for(int[] m : map) {
             System.out.println(Arrays.toString(m));
         }
