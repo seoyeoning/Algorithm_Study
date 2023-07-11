@@ -31,6 +31,8 @@ public class success_v1 {
         System.out.println(w);
         System.out.println(b);
 
+        br.close();
+
     }
     // 4. 매개변수 생각하면서 먼저 적고 안에 함수 구체화 하기
     public static void rec (int x, int y, int size) {

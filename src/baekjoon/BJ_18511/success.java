@@ -25,6 +25,8 @@ public class success {
         Arrays.sort(num);
         dfs(0);
         System.out.println(ans);
+
+        br.close();
     }
     private static void dfs(int now) {
         if(now>N) return;
