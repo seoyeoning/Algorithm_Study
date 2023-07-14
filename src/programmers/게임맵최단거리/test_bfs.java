@@ -5,6 +5,7 @@ public class test_bfs {
 
     static List<Integer>[] nodeList;
     static boolean[] visited;
+
     public static void main(String[] args) {
         int n = 6;
         int[][] node = {{1,2},{1,3},{2,4},{2,5}};
