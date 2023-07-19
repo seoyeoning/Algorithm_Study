@@ -42,7 +42,7 @@ public class success {
                     continue;
                 }
                 if (!signal[0][i + 1].equals("#")) {
-                    // 0또는 4 (다음 열이 #이 아님)
+                    // 1또는 4 (다음 열이 #이 아님)
                     if (signal[3][i].equals("#")) {
                         // 3행이 #이므로 암호는 1
                         result += "1";
@@ -51,7 +51,7 @@ public class success {
                         i += 3;
                     }
                 } else {
-                    // 0,4 제외
+                    // 1,4 제외
                     if (signal[1][i].equals("#") && signal[1][i + 2].equals("#")) {
                         check_0_8_9(i, signal);
                     } else if (!signal[1][i].equals("#") && signal[1][i + 2].equals("#")) {
@@ -64,7 +64,7 @@ public class success {
             }
         }
 
-//        System.out.println(result);
+        System.out.println(result);
     }
 
     static public void check_0_8_9(int i, String[][] signal) {
