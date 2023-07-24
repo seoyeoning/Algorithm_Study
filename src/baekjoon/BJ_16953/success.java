@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 public class success {
 
     static int sum = Integer.MAX_VALUE;
-    //static int count = -1;
 
     public static void main(String[] args) throws IOException {
 
@@ -18,8 +17,6 @@ public class success {
 
         Long begin = Long.parseLong(st.nextToken());
         Long target = Long.parseLong(st.nextToken());
-
-        // long Long
 
         int count = 0;
         dfs(begin, target,count);
@@ -37,11 +34,7 @@ public class success {
         if (num.equals(target)) {
 //            System.out.println("타겟!!");
             sum = Math.min(sum, count);
-//            count--;
-//            return;
         } else if (num > target) {
-//            count--;
-//            return;
         } else {
             dfs(num * 2, target,count+1);
             dfs(Long.parseLong(num+"1"), target,count+1);
