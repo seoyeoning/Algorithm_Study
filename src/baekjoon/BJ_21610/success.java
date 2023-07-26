@@ -41,7 +41,7 @@ public class success {
         cloud.add(new int[]{N, 2});
         cloud.add(new int[]{N - 1, 1});
         cloud.add(new int[]{N - 1, 2});
-        
+
         for (int[] move : moves) {
 
             go(move,cloud,N); // 이동
