@@ -23,7 +23,7 @@ public class success {
         int R = Integer.parseInt(st.nextToken());
 
         int[][] ground = new int[N][N];
-        boolean[][] visited = new boolean[N][N];
+        boolean[][] visited;
         List<int[]> store = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -32,15 +32,9 @@ public class success {
             }
         }
 
-        boolean union = false;
-
         while (true) {
             visited = new boolean[N][N];
-            union = move(L, R, ground, visited, store);
-//            for (int[] ints : ground) {
-//                System.out.println(Arrays.toString(ints));
-//            }
-//            System.out.println("**");
+            boolean union = move(L, R, ground, visited, store);
             if (union) {
                 days++;
             } else {
@@ -95,3 +89,8 @@ public class success {
     }
 
 }
+
+//            for (int[] ints : ground) {
+//                System.out.println(Arrays.toString(ints));
+//            }
+//            System.out.println("**");
