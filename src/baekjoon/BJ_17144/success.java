@@ -58,8 +58,6 @@ public class success {
         System.out.println(result);
     }
 
-//    static int[] dr = {-1, 1, 0, 0}; // 상(0) 하(1) 좌(2) 우(3)
-//    static int[] dc = {0, 0, -1, 1};
     static void acw(int[][] home, int now_r, int now_c, int dir, int air_cleaner_row) {
         int nr = now_r + dr[dir];
         int nc = now_c + dc[dir];
@@ -154,8 +152,9 @@ public class success {
         store.clear();
     }
 
-
 }
+
+
 
 
 //3 3 1
