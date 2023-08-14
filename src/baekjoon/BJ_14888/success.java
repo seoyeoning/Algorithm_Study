@@ -36,7 +36,7 @@ public class success {
     // operator +, - , *, /
     public static void dfs(int[] num, int[] operator, int now, int now_num) {
 
-        if (now == num.length - 1) {
+        if (now == num.length - 1) { // now = depth
             Max = Math.max(Max, now_num);
             Min = Math.min(Min, now_num);
             return;
