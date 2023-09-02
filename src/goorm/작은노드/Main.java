@@ -38,12 +38,12 @@ public class Main {
             Collections.sort(list[i]);
         }
 
-//        System.out.println(Arrays.toString(list));
+        System.out.println(Arrays.toString(list));
 
         dfs(K, list, visited);
 
 //        System.out.println(visited_node_num);
-//        System.out.println(visited_node);
+        System.out.println(visited_node);
 //        System.out.println(visited_node.get(0));
 
         System.out.println(visited_node_num + " " + visited_node.get(0));

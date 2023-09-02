@@ -45,6 +45,7 @@ public class Main {
                     }
                 }
             }
+
             if (danjiNum > maxDanjiNum) {
                 maxDanjiNum = danjiNum;
                 maxDanji = h;
@@ -53,9 +54,12 @@ public class Main {
                     maxDanji = h;
                 }
             }
+
             danjiNum = 0;
+
         }
 
+        // 답
         System.out.println(maxDanji);
 
     }
