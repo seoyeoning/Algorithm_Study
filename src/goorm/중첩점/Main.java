@@ -39,12 +39,12 @@ public class Main {
             }
         }
 
-//        for (int[][] ints : board) {
-//            System.out.println();
-//            for (int[] anInt : ints) {
-//                System.out.print(Arrays.toString(anInt));
-//            }
-//        }
+        for (int[][] ints : board) {
+            System.out.println();
+            for (int[] anInt : ints) {
+                System.out.print(Arrays.toString(anInt));
+            }
+        }
 
         long result = 0;
         for (int i = 1; i <= N; i++) {
