@@ -15,7 +15,5 @@ public class main {
         if (a==c) System.out.println("같다");
         else System.out.println("다르다");
 
-
-
     }
 }
