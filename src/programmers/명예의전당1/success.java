@@ -1,7 +1,7 @@
 package programmers.명예의전당1;
 import java.util.*;
 
-public class fail {
+public class success {
     public int[] solution(int k, int[] score) {
 
         int score_length = score.length;
@@ -15,8 +15,13 @@ public class fail {
             if (i < k) {
                 best.add(score[i]);
             } else {
+                if (best.peek() < score[i]) {
+                    best.remove();
+                    best.add(score[i]);
+                }
 
             }
+            answer[i] = best.peek();
 
         }
 
