@@ -1,7 +1,8 @@
 package programmers.달리기경주;
-import java.util.*;
 
-public class success {
+import java.util.Arrays;
+
+public class fail1 {
 
     public String[] solution(String[] players, String[] callings) {
         // String[] answer = {};
