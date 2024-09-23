@@ -1,4 +1,4 @@
-package baekjoon.BJ1260;
+package baekjoon.BJ_1260;
 
 import java.io.BufferedReader;
 import java.io.IOException;
