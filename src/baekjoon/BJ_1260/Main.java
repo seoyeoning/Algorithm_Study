@@ -82,7 +82,7 @@ public class Main {
 
     static void bfs(int node) {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(node);
+        queue.offer(node);
         visited[node] = true;
 
         while (!queue.isEmpty()) {
@@ -93,7 +93,7 @@ public class Main {
             for (int i : list[nowNode]) {
                 if (!visited[i]) {
                     visited[i] = true;
-                    queue.add(i);
+                    queue.offer(i);
                 }
             }
         }
