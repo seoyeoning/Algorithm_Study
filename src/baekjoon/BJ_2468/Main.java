@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -21,7 +23,7 @@ public class Main {
         Node[][] board = new Node[N][N];
         boolean[][] visited = new boolean[N][N];
 
-        int max_depth = 0; // 1부터 9까지
+        int max_depth = 0;
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
@@ -34,7 +36,8 @@ public class Main {
         int max_area = 0;
         int safe_area = 0;
 
-        for (int i = 1; i <= max_depth; i++) {
+        // i가 0부터 시작이어야 함 (비가 안 오는 경우)
+        for (int i = 0; i <= max_depth; i++) {
 
             for (Node[] nodes : board) {
                 for (Node node : nodes) {
@@ -42,19 +45,33 @@ public class Main {
                 }
             }
 
+            // dfs 풀이
+//            for (Node[] nodes : board) {
+//                for (Node node : nodes) {
+//                    if (!visited[node.r][node.c]) {
+//                        safe_area++;
+//                        dfs(node, board, visited);
+//                    }
+//                }
+//            }
+
+            // bfs 풀이
             for (Node[] nodes : board) {
                 for (Node node : nodes) {
                     if (!visited[node.r][node.c]) {
                         safe_area++;
-                        dfs(node, board, visited);
+                        bfs(node, board, visited);
                     }
                 }
             }
+
             max_area = Math.max(max_area, safe_area);
             safe_area = 0;
             visited = new boolean[N][N];
 
         }
+
+
 
         System.out.println(max_area);
 
@@ -79,7 +96,31 @@ public class Main {
 
     }
 
-    static void bfs() {
+    static void bfs(Node now_node, Node[][] board, boolean[][] visited) {
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.offer(now_node);
+        visited[now_node.r][now_node.c] = true;
+
+        while (!queue.isEmpty()) {
+
+            Node now = queue.poll();
+
+            for (int i = 0; i < 4; i++) {
+
+                int next_r = now.r + dr[i];
+                int next_c = now.c + dc[i];
+
+                if (next_r < 0 || next_r > board.length - 1 || next_c < 0 || next_c > board.length - 1) continue;
+
+                if (visited[next_r][next_c]) continue;
+
+                queue.offer(new Node(next_r, next_c, board[next_r][next_c].d));
+                visited[next_r][next_c] = true;
+
+
+            }
+        }
 
     }
 
