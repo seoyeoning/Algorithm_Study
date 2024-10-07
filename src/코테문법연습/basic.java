@@ -44,19 +44,19 @@ public class basic {
         String num = "100";
 
         int str_to_num_1 = Integer.parseInt(num);
-        System.out.println(str_to_num_1);
+//        System.out.println(str_to_num_1);
 
         int str_num = 1000;
         String num_to_str_1 = Integer.toString(str_num);
         String num_to_str_2 = String.valueOf(str_num);
-        System.out.println(num_to_str_1);
-        System.out.println(num_to_str_2);
+//        System.out.println(num_to_str_1);
+//        System.out.println(num_to_str_2);
 
         // max, min 값 찾기
-        int a = 1;
-        int b = 2;
-        System.out.println(Math.max(a, b));
-        System.out.println(Math.min(a, b));
+//        int a = 1;
+//        int b = 2;
+//        System.out.println(Math.max(a, b));
+//        System.out.println(Math.min(a, b));
 
     }
 
