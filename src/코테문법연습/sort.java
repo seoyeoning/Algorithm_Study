@@ -44,12 +44,16 @@ public class sort {
             System.out.println(test1.toString());
         }
 
+        // 오름차순
         Collections.sort(testList);
         System.out.println("///");
 
         for (Test1 test1 : testList) {
             System.out.println(test1.toString());
         }
+
+        // 내림차순
+        Collections.reverse(testList);
 
 
 
