@@ -1,4 +1,4 @@
-package etc.큰수의법칙;
+package 이코테.큰수의법칙;
 
 import java.io.BufferedReader;
 import java.io.IOException;
