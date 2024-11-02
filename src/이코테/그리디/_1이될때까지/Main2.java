@@ -1,4 +1,4 @@
-package 이코테._1이될때까지;
+package 이코테.그리디._1이될때까지;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,9 +1,8 @@
-package 이코테.숫자카드게임;
+package 이코테.그리디.숫자카드게임;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {

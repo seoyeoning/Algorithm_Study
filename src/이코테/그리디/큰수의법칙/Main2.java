@@ -1,4 +1,4 @@
-package 이코테.큰수의법칙;
+package 이코테.그리디.큰수의법칙;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Main2 {
 
     public static void main(String[] args) throws IOException {
 
@@ -30,27 +30,15 @@ public class Main {
         int first = nums[0];
         int second = nums[1];
 
-        int sum = 0;
+        // 가장 큰 수가 더해지는 수
+        int cnt = (M / (K + 1)) * K;
+        cnt += M % (K + 1);
 
-        while (true) {
+        int result = 0;
+        result += cnt * first;
+        result += (M - cnt) * second;
 
-            for (int i = 0; i < K; i++) {
-                if (M == 0) {
-                    break;
-                }
-
-                sum += first;
-                M--;
-            }
-            if (M == 0) {
-                break;
-            }
-            sum += second;
-            M--;
-
-        }
-
-        System.out.println(sum);
+        System.out.println(result);
 
     }
 
