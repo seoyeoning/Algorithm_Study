@@ -16,34 +16,36 @@ public class test {
 //
 //        t.setAa(6);
 
-        Set<Integer> hs = new HashSet<>();
+//        Set<Integer> hs = new HashSet<>();
+//
+//        hs.add(1);
+//        for (Integer h : hs) {
+//            System.out.println(h);
+//        }
+//
+//        hsTest(hs);
+//        System.out.println("--");
+//
+//        for (Integer h : hs) {
+//            System.out.println(h);
+//        }
+//
+//        String str = "aaa";
+//        str.length();
+//        str.isEmpty();
+//
+//        PriorityQueue<Student3> queue = new  PriorityQueue<>(
+//                (o1,o2) -> {
+//                    if (o1.age == o2.age) {
+//                        return o2.name.compareTo(o1.name);
+//                    }
+//                    return o1.age - o2.age;
+//                }
+//                );
 
-        hs.add(1);
-        for (Integer h : hs) {
-            System.out.println(h);
-        }
-
-        hsTest(hs);
-        System.out.println("--");
-
-        for (Integer h : hs) {
-            System.out.println(h);
-        }
-
-        String str = "aaa";
-        str.length();
-        str.isEmpty();
-
-        PriorityQueue<Student3> queue = new  PriorityQueue<>(
-                (o1,o2) -> {
-                    if (o1.age == o2.age) {
-                        return o2.name.compareTo(o1.name);
-                    }
-                    return o1.age - o2.age;
-                }
-                );
-
-
+        String str = "11";
+        String[] test = str.split(",");
+        System.out.println(Arrays.toString(test));
     }
 
     static void hsTest(Set<Integer> hs) {
