@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int[] list = new int[N];
+        Integer[] list = new Integer[N];
 
         st = new StringTokenizer(br.readLine());
 
@@ -24,9 +25,35 @@ public class Main {
             list[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(list);
+        Arrays.sort(list, Collections.reverseOrder());
 
-        System.out.println(Arrays.toString(list));
+        System.out.println(binary_search(list, 0, list[0], M));
+
+    }
+
+    static public int binary_search(Integer[] list, int start, int end, int target) {
+
+        if (start > end) {
+            return -1;
+        }
+
+        int mid = (start + end) / 2;
+
+        int sum = 0;
+
+        for (Integer integer : list) {
+            if (integer > mid) {
+                sum += (integer - mid);
+            }
+        }
+
+        if (sum == target) {
+            return mid;
+        } else if (sum > target) {
+            return binary_search(list, mid + 1, end, target);
+        } else {
+            return binary_search(list, start, mid - 1, target);
+        }
 
     }
 
