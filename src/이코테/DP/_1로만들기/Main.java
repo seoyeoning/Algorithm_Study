@@ -11,9 +11,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int X = Integer.parseInt(br.readLine());
 
-
-
-        System.out.println(X);
+        System.out.println();
 
     }
 }
