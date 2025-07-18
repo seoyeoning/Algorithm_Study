@@ -25,8 +25,8 @@ public class Main {
         List<Integer> list = Arrays.asList(arr2); // Wrapper 클래스 배열일 경우만 변환 가능
         System.out.println(list);
         // 오름차순
-        Collections.sort(list); // 정렬만 하고 void 반환
-        System.out.println(list);
+//        Collections.sort(list); // 정렬만 하고 void 반환
+//        System.out.println(list);
         // 내림차순
         Collections.reverseOrder();
 
